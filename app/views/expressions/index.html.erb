@@ -1,0 +1,29 @@
+<h1>Listing expressions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Expression</th>
+      <th>Result</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @expressions.each do |expression| %>
+      <tr>
+        <td><%= expression.string %></td>
+        <td><%= expression.result %></td>
+        <td><%= link_to 'Show', expression %></td>
+        <td><%= link_to 'Edit', edit_expression_path(expression) %></td>
+        <td><%= link_to 'Destroy', expression, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Expression', new_expression_path %>

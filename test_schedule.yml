@@ -1,0 +1,7 @@
+first_test_schedule:
+  cron: "10 * * * * *"
+  # every: "10s"
+  class: 'SJob'
+  queue: 'test_schedule'
+  args: 'hi again!'
+
